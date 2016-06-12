@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.linson.xtools.domain.XtoolsLog" table="xtools_log" schema="xtools">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment" />
+        </id>
+        <property name="date">
+            <column name="date" sql-type="varchar(45)" length="45" not-null="false"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="varchar(45)" length="45" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>
