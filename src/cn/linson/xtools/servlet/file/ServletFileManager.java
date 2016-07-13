@@ -24,7 +24,6 @@ public class ServletFileManager extends HttpServlet {
         String path = getServletContext().getRealPath("/files");
         File fileDir = new File(path);
         if (fileDir.exists()) {
-//            String[] fileNames = fileDir.list();
             File[] files = fileDir.listFiles();
             request.setAttribute("files",files);
         }

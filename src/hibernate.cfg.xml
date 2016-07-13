@@ -4,11 +4,14 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://123.56.111.226:3306/xtools</property>
+        <property name="connection.url">jdbc:mysql://192.168.8.19:3306/xtools</property>
+        <!--<property name="connection.url">jdbc:mysql://123.56.111.226:3306/xtools</property>-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.username">root</property>
         <property name="connection.password">root120831</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
         <mapping resource="cn/linson/xtools/domain/User.hbm.xml"/>
         <mapping resource="cn/linson/xtools/domain/XtoolsLog.hbm.xml"/>
+        <mapping resource="cn/linson/xtools/domain/ImageInfo.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

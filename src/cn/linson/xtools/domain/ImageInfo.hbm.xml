@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.linson.xtools.domain.ImageInfo" table="image_info" schema="xtools">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"></generator>
+        </id>
+        <property name="fileName">
+            <column name="fileName" sql-type="varchar(1000)" length="1000"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(1000)" length="1000"/>
+        </property>
+        <property name="comments">
+            <column name="comments" sql-type="varchar(1000)" length="1000"/>
+        </property>
+        <property name="userName">
+            <column name="userName" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

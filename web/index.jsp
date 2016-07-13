@@ -21,5 +21,6 @@
 </form>
 <a href="/XToolsServer/ServletDisplayFiles">ServletDisplayFiles</a>
 <a href="/XToolsServer/ServletFileManager">ServletFileManager</a>
+<a href="/XToolsServer/ImageInfoServlet">ImageInfoServlet</a>
 </body>
 </html>
