@@ -22,10 +22,13 @@ public class ServletFileManager extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = getServletContext().getRealPath("/files");
+//        String path = "c:/temp/";
         File fileDir = new File(path);
         if (fileDir.exists()) {
             File[] files = fileDir.listFiles();
-            request.setAttribute("files",files);
+            request.setAttribute("files", files);
+        } else {
+            System.out.println("显示文件夹不存在：" + path);
         }
         ArrayList<FileInfo> arrayList = FileUtils.getFileInfos(fileDir);
 

@@ -18,8 +18,9 @@ public class ServletUpFile extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (isMultipart) {
-            String realPath = getServletContext().getRealPath("/files");
-            File fileDir = new File(realPath);
+            String path = getServletContext().getRealPath("/files");
+//            String path = "c:/temp/";
+            File fileDir = new File(path);
             if (!fileDir.exists()) {
                 fileDir.mkdir();
             }
@@ -37,8 +38,9 @@ public class ServletUpFile extends javax.servlet.http.HttpServlet {
                         String fileName = item.getName();
                         int position = fileName.lastIndexOf("\\");
                         String temp = fileName.substring(position+1);
-                        System.out.println(temp);
-                        item.write(new File(fileDir, temp));
+                        File file = new File(fileDir, temp);
+                        item.write(file);
+                        System.out.println("上传文件：" + file.getAbsolutePath());
                     }
                 }
             } catch (Exception e) {

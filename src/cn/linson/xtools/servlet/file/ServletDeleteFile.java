@@ -35,12 +35,14 @@ public class ServletDeleteFile extends HttpServlet {
             type = "others";
         }
         String path = getServletContext().getRealPath("/files");
+//        String path = "c:/temp/";
         File fileDir = new File(path);
         MyDB myDB = new MyDB();
         if (fileDir.exists()) {
             File file = new File(fileDir, fileName);
             if (file.exists()) {
                 file.delete();
+                System.out.println("删除文件：" + file.getAbsolutePath());
             }
             ImageInfo imageInfo = myDB.findByImageName(fileName);
             myDB.delete(imageInfo);
