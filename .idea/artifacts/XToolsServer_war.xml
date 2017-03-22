@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="XToolsServer:war">
+  <artifact type="war" build-on-make="true" name="XToolsServer:war">
     <output-path>$PROJECT_DIR$/out/artifacts/XToolsServer_war</output-path>
-    <root id="archive" name="XToolsServer.war">
+    <root id="archive" name="XToolsServer_war.war">
       <element id="artifact" artifact-name="XToolsServer:war exploded" />
     </root>
   </artifact>

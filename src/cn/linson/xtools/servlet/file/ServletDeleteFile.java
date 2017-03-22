@@ -40,10 +40,10 @@ public class ServletDeleteFile extends HttpServlet {
         if (fileDir.exists()) {
             File file = new File(fileDir, fileName);
             if (file.exists()) {
-                ImageInfo imageInfo = myDB.findByImageName(fileName);
-                myDB.delete(imageInfo);
                 file.delete();
             }
+            ImageInfo imageInfo = myDB.findByImageName(fileName);
+            myDB.delete(imageInfo);
         }
         request.getRequestDispatcher("/ServletDisplayOneTypeFiles?type=" + type).forward(request, response);
     }

@@ -71,7 +71,7 @@
         </tr>
     </table>
 </div>
-<div style="border: 1px solid black;">
+<div style="border: 0px solid black;">
     <table class="trstyle">
         <tr>
             <c:forEach var="imageInfo" items="${hwsdhxg}">
@@ -109,7 +109,7 @@
         </tr>
     </table>
 </div>
-<div style="border: 1px solid black;">
+<div style="border: 0px solid black;">
     <table class="trstyle">
         <tr>
             <c:forEach var="imageInfo" items="${dyjupsxg}">
@@ -147,7 +147,7 @@
         </tr>
     </table>
 </div>
-<div style="border: 1px solid black;">
+<div style="border: 0px solid black;">
     <table class="trstyle">
         <tr>
             <c:forEach var="imageInfo" items="${whgx}">
@@ -185,7 +185,7 @@
         </tr>
     </table>
 </div>
-<div style="border: 1px solid black;">
+<div style="border: 0px solid black;">
     <table class="trstyle">
         <tr>
             <c:forEach var="imageInfo" items="${others}">
